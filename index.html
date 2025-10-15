@@ -4,6 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ahmed Abdelsalam | AI Engineer Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Ahmed Abdelsalam - AI Engineer with expertise in Python, Machine Learning, Deep Learning, and AI projects. Explore my portfolio, skills, background, and certifications." />
+  <meta name="keywords" content="AI Engineer, Artificial Intelligence, Python, Machine Learning, Deep Learning, AI Portfolio, Ahmed Abdelsalam, Software Development" />
+  <meta name="author" content="Ahmed Abdelsalam" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmed Abdelsalam",
+    "jobTitle": "AI Engineer",
+    "url": "https://eng-ahmed-15.github.io/portfolio/",
+    "sameAs": [
+      "https://linkedin.com/in/ahmed-abdelsalam15",
+      "https://github.com/eng-ahmed-15"
+    ]
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     rel="stylesheet"
@@ -24,7 +45,6 @@
       position: relative;
       min-height: 100vh;
     }
-
     /* AI Tech Background with moving network nodes and lines */
     #ai-background {
       position: fixed;
@@ -36,21 +56,18 @@
       background: radial-gradient(circle at center, #161620, #0a0a12);
       overflow: hidden;
     }
-
     .node {
       fill: #4f46e5;
       filter: drop-shadow(0 0 5px #7c3aed88);
       opacity: 0.7;
       animation: pulseNode 3s infinite ease-in-out;
     }
-
     .line {
       stroke: #7c3aedbb;
       stroke-width: 1.5;
       opacity: 0.5;
       animation: pulseLine 3s infinite ease-in-out;
     }
-
     @keyframes pulseNode {
       0%, 100% {
         r: 3;
@@ -61,7 +78,6 @@
         opacity: 1;
       }
     }
-
     @keyframes pulseLine {
       0%, 100% {
         stroke-opacity: 0.5;
@@ -70,7 +86,6 @@
         stroke-opacity: 1;
       }
     }
-
     .glass-effect {
       background: rgba(17, 24, 39, 0.7);
       border: 1px solid rgba(99, 102, 241, 0.25);
@@ -83,7 +98,6 @@
       box-shadow: 0 20px 40px 0 rgba(99, 102, 241, 0.32);
       transform: translateY(-6px);
     }
-    
     .section-title {
       border-bottom: 2px solid #4338ca;
       padding-bottom: 0.5rem;
@@ -94,11 +108,9 @@
       text-shadow: 0 2px 12px rgba(99, 102, 241, 0.4);
       margin-bottom: 2rem;
     }
-
     a.bg-gray-200 {
       animation: pulse 2s infinite;
     }
-
     @keyframes pulse {
       0%, 100% {
         transform: scale(1);
@@ -108,7 +120,6 @@
         box-shadow: 0 0 20px 2px rgba(99, 102, 241, 0.23);
       }
     }
-
     #scrollIndicator {
       position: fixed;
       top: 0; left: 0;
@@ -118,7 +129,6 @@
       z-index: 88;
       transition: width 0.2s;
     }
-
     #backToTop {
       position: fixed;
       bottom: 30px;
@@ -137,18 +147,16 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-
     #backToTop:hover {
       background: #6366f1;
     }
   </style>
 </head>
 <body>
-<div id="scrollIndicator"></div>
+  <div id="scrollIndicator"></div>
 
-<!-- SVG Network Nodes and Lines -->
-<svg id="ai-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-    <!-- Nodes -->
+  <!-- SVG AI Network Background -->
+  <svg id="ai-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
     <circle class="node" cx="100" cy="100" r="3"/>
     <circle class="node" cx="300" cy="80" r="3"/>
     <circle class="node" cx="500" cy="120" r="3"/>
@@ -158,7 +166,6 @@
     <circle class="node" cx="400" cy="450" r="3"/>
     <circle class="node" cx="660" cy="500" r="3"/>
     <circle class="node" cx="900" cy="480" r="3"/>
-    <!-- Lines -->
     <line class="line" x1="100" y1="100" x2="300" y2="80"/>
     <line class="line" x1="300" y1="80" x2="500" y2="120"/>
     <line class="line" x1="500" y1="120" x2="700" y2="90"/>
@@ -168,267 +175,268 @@
     <line class="line" x1="660" y1="500" x2="900" y2="480"/>
     <line class="line" x1="300" y1="80" x2="150" y2="400"/>
     <line class="line" x1="700" y1="90" x2="660" y2="500"/>
-</svg>
+  </svg>
 
-<header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_0_22px_rgba(99,102,241,0.18)]">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-extrabold section-title">Ahmed Abdelsalam</h1>
-    <nav class="hidden md:flex space-x-6 text-lg">
-      <a href="#about" class="hover:text-indigo-400">About</a>
-      <a href="#skills" class="hover:text-indigo-400">Skills</a>
-      <a href="#background" class="hover:text-indigo-400">Background</a>
-      <a href="#projects" class="hover:text-indigo-400">Projects</a>
-      <a href="#certifications" class="hover:text-indigo-400">Certifications</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
-    </nav>
-    <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-200">
-      <i class="fas fa-bars"></i>
-    </button>
+  <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_0_22px_rgba(99,102,241,0.18)]">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold section-title">Ahmed Abdelsalam</h1>
+      <nav class="hidden md:flex space-x-6 text-lg">
+        <a href="#about" class="hover:text-indigo-400">About</a>
+        <a href="#skills" class="hover:text-indigo-400">Skills</a>
+        <a href="#background" class="hover:text-indigo-400">Background</a>
+        <a href="#projects" class="hover:text-indigo-400">Projects</a>
+        <a href="#certifications" class="hover:text-indigo-400">Certifications</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-200">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <a href="#about" class="block py-2 text-center hover:bg-gray-900 rounded">About</a>
+      <a href="#skills" class="block py-2 text-center hover:bg-gray-900 rounded">Skills</a>
+      <a href="#background" class="block py-2 text-center hover:bg-gray-900 rounded">Background</a>
+      <a href="#projects" class="block py-2 text-center hover:bg-gray-900 rounded">Projects</a>
+      <a href="#certifications" class="block py-2 text-center hover:bg-gray-900 rounded">Certifications</a>
+      <a href="#contact" class="block py-2 text-center hover:bg-gray-900 rounded">Contact</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-12">
+
+    <!-- Hero Section -->
+    <section id="hero" class="flex flex-col md:flex-row items-center justify-between text-center md:text-left min-h-[70vh]">
+      <div class="md:w-1/2 mb-10 md:mb-0 space-y-6">
+        <h2 class="text-5xl md:text-6xl font-extrabold text-white section-title">Ahmed Abdelsalam</h2>
+        <p class="text-2xl text-indigo-400 mt-4 mb-8">AI Engineer</p>
+        <a href="#contact" class="bg-gray-200 hover:bg-white text-black font-bold py-3 px-8 rounded-full text-lg inline-block">Work With Me</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="profile.jpg" alt="Photo of Ahmed Abdelsalam" class="rounded-full border-4 border-indigo-600 shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+      <h2 class="text-4xl font-bold mb-10 text-center section-title text-white">Summary</h2>
+      <div class="glass-effect rounded-xl p-8 max-w-4xl mx-auto text-center md:text-lg leading-relaxed">
+        <p>
+          Ambitious and detail-oriented Computer Science student at Sinai University with a strong foundation in programming, problem-solving, and software development. Proficient in C++ and Python, with hands-on experience in building desktop applications and implementing real-world solutions. Known for fast learning, analytical thinking, and teamwork. Passionate about continuous growth and eager to contribute to impactful, AI-driven projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="glass-effect rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-indigo-200 mb-6 text-center"><i class="fas fa-brain mr-2"></i>AI & Programming Skills</h3>
+          <ul class="space-y-4 text-lg">
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Python programming & AI libraries (TensorFlow, PyTorch)</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Machine Learning models & data analysis</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Deep Learning & Neural Networks</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Data Structures and Algorithms</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Object-Oriented Programming (OOP)</li>
+          </ul>
+        </div>
+        <div class="glass-effect rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-indigo-200 mb-6 text-center"><i class="fas fa-tools mr-2"></i>Soft Skills</h3>
+          <ul class="space-y-4 text-lg">
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Strong communication skills</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Quick learner and adaptable</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Attention to detail and analytical thinking</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Teamwork and collaboration</li>
+            <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Time management skills</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background Section -->
+    <section id="background" class="py-24">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">My Background</h2>
+      <div class="max-w-4xl mx-auto pl-12 relative timeline">
+        <div class="mb-12 relative">
+          <div class="absolute -left-10 top-1 w-8 h-8 bg-indigo-700 rounded-full border-4 border-black flex items-center justify-center">
+            <i class="fas fa-graduation-cap text-indigo-200"></i>
+          </div>
+          <div class="glass-effect rounded-xl p-6">
+            <p class="text-indigo-300 font-bold mb-1">Sep 2023 - Expected 2027</p>
+            <h3 class="text-2xl font-bold text-white">Faculty of Information Technology and Computer Science</h3>
+            <p class="text-lg text-indigo-200 mb-2">Sinai University</p>
+            <p>Current CGPA: 3.00 out of 4.00</p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-8 h-8 bg-indigo-700 rounded-full border-4 border-black flex items-center justify-center">
+            <i class="fas fa-briefcase text-indigo-200"></i>
+          </div>
+          <div class="glass-effect rounded-xl p-6">
+            <p class="text-indigo-300 font-bold mb-1">2021 - 2023</p>
+            <h3 class="text-2xl font-bold text-white">Freelancer Graphic Designer</h3>
+            <p class="mt-2 leading-relaxed">
+              Designed logos, social media content, posters, and promotional materials for clients across various industries. Used tools to deliver high-quality, client-oriented designs. Collaborated with clients to understand their vision and meet tight deadlines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <a href="https://github.com/eng-ahmed-15/Paint-App-CS" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
+          <h3 class="text-xl font-bold text-indigo-200">Paint App - C#</h3>
+        </a>
+        <a href="https://github.com/eng-ahmed-15/Banking-Management-System-SWE" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
+          <h3 class="text-xl font-bold text-indigo-200">Banking Management System - SWE</h3>
+        </a>
+        <a href="https://github.com/eng-ahmed-15/Dental-Clinic-Management-System-Cbb" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
+          <h3 class="text-xl font-bold text-indigo-200">Dental Clinic Management System - C++</h3>
+        </a>
+        <a href="https://github.com/eng-ahmed-15/Hospital-Management-System-DB" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
+          <h3 class="text-xl font-bold text-indigo-200">Hospital Management System - DB</h3>
+        </a>
+        <a href="https://github.com/eng-ahmed-15/coffee-health-analysis" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
+          <h3 class="text-xl font-bold text-indigo-200">Coffee Health Analysis Machine Learning</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-24">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">Certifications</h2>
+      <div class="max-w-4xl mx-auto space-y-4">
+        <a href="https://maharatech.gov.eg/badges/badge.php?hash=7595287d1f0bf10c42a3a0d5bcc40ed63445de1a" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Python Programming Basics</p>
+            <p class="text-indigo-400">Mahara Tech - AI Academy, ITI</p>
+          </div>
+        </a>
+        <a href="https://maharatech.gov.eg/badges/badge.php?hash=cb54df6b43631b9f2c2e2be8f87da1e3e6e20084" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">AI For Everyone (AI4E)</p>
+            <p class="text-indigo-400">Mahara Tech - AI Academy, ITI</p>
+          </div>
+        </a>
+        <a href="https://www.credly.com/badges/8a7a54b5-533d-4583-8538-c798c66d8a34/linked_in_profile" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Python Essentials 1</p>
+            <p class="text-indigo-400">Cisco Networking Academy</p>
+          </div>
+        </a>
+        <a href="https://www.credly.com/badges/1d28fe6c-b8bb-4414-a385-cfc1111dfb0e/linked_in_profile" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Python Essentials 2</p>
+            <p class="text-indigo-400">Cisco Networking Academy</p>
+          </div>
+        </a>
+        <a href="https://www.life-global.org/certificate/0eac495e-ef77-4519-b96b-15d35f459fd0" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Artificial Intelligence for Beginners</p>
+            <p class="text-indigo-400">HP LIFE - HP Foundation</p>
+          </div>
+        </a>
+        <a href="https://www.credly.com/badges/09bae509-f6b2-42f8-9f40-690ce317d739/linked_in_profile" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Introduction to Modern AI</p>
+            <p class="text-indigo-400">Cisco Networking Academy</p>
+          </div>
+        </a>
+        <a href="https://sprints.ai/en-us/journeys/learning/ID%20-%20SPR%20-%207G3W5Z/view-certificate-serial" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">AI and Machine Learning</p>
+            <p class="text-indigo-400">Sprints x Microsoft Summer Camp</p>
+          </div>
+        </a>
+        <a href="https://learn.nvidia.com/certificates?id=yJo5LGKsSKyZjXnj5jamqg" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Getting Started with Deep Learning</p>
+            <p class="text-indigo-400">NVIDIA</p>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1VtPqLA6H9dwzumd55_qxV1n6gJRqQcgL/view?usp=drive_link" target="_blank" class="block">
+          <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
+            <p class="font-semibold text-indigo-200">Machine Learning Summer Training</p>
+            <p class="text-indigo-400">National Telecommunication Institute (NTI) & ITIDA</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+      <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">Reach Out to Me</h2>
+      <div class="glass-effect max-w-2xl mx-auto rounded-xl p-8">
+        <p class="text-center text-lg mb-8">Let's collaborate and build something amazing together!</p>
+        <div class="space-y-6 text-lg">
+          <div class="flex items-center">
+            <i class="fas fa-map-marker-alt text-indigo-300 w-6 text-center mr-4"></i>
+            <span>Alexandria, Egypt</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-phone text-indigo-300 w-6 text-center mr-4"></i>
+            <a href="tel:+201028462632" class="hover:text-indigo-400">+20 1028462632</a>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope text-indigo-300 w-6 text-center mr-4"></i>
+            <a href="mailto:a.abogahl2445@su.edu.eg" class="hover:text-indigo-400">a.abogahl2445@su.edu.eg</a>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-linkedin text-indigo-300 w-6 text-center mr-4"></i>
+            <a href="https://linkedin.com/in/ahmed-abdelsalam15" target="_blank" class="hover:text-indigo-400">linkedin.com/in/ahmed-abdelsalam15</a>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-github text-indigo-300 w-6 text-center mr-4"></i>
+            <a href="https://github.com/eng-ahmed-15" target="_blank" class="hover:text-indigo-400">github.com/eng-ahmed-15</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-black/70 border-t border-gray-800 py-6 text-center text-indigo-300">
+    <p>© 2025 Ahmed Abdelsalam. All Rights Reserved.</p>
+  </footer>
+
+  <div id="backToTop">
+    <i class="fas fa-arrow-up"></i>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-    <a href="#about" class="block py-2 text-center hover:bg-gray-900 rounded">About</a>
-    <a href="#skills" class="block py-2 text-center hover:bg-gray-900 rounded">Skills</a>
-    <a href="#background" class="block py-2 text-center hover:bg-gray-900 rounded">Background</a>
-    <a href="#projects" class="block py-2 text-center hover:bg-gray-900 rounded">Projects</a>
-    <a href="#certifications" class="block py-2 text-center hover:bg-gray-900 rounded">Certifications</a>
-    <a href="#contact" class="block py-2 text-center hover:bg-gray-900 rounded">Contact</a>
-  </div>
-</header>
 
-<main class="container mx-auto px-6 py-12">
+  <script>
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const backToTop = document.getElementById("backToTop");
+    const scrollIndicator = document.getElementById("scrollIndicator");
 
-  <!-- Hero Section -->
-  <section id="hero" class="flex flex-col md:flex-row items-center justify-between text-center md:text-left min-h-[70vh]">
-    <div class="md:w-1/2 mb-10 md:mb-0 space-y-6">
-      <h2 class="text-5xl md:text-6xl font-extrabold text-white section-title">Ahmed Abdelsalam</h2>
-      <p class="text-2xl text-indigo-400 mt-4 mb-8">AI Engineer</p>
-      <a href="#contact" class="bg-gray-200 hover:bg-white text-black font-bold py-3 px-8 rounded-full text-lg inline-block">Work With Me</a>
-    </div>
-    <div class="md:w-1/2 flex justify-center">
-      <img src="profile.jpg" alt="Photo of Ahmed Abdelsalam" class="rounded-full border-4 border-indigo-600 shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover" />
-    </div>
-  </section>
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
 
-  <!-- About Section -->
-  <section id="about" class="py-24">
-    <h2 class="text-4xl font-bold mb-10 text-center section-title text-white">Summary</h2>
-    <div class="glass-effect rounded-xl p-8 max-w-4xl mx-auto text-center md:text-lg leading-relaxed">
-      <p>
-        Ambitious and detail-oriented Computer Science student at Sinai University with a strong foundation in programming, problem-solving, and software development. Proficient in C++ and Python, with hands-on experience in building desktop applications and implementing real-world solutions. Known for fast learning, analytical thinking, and teamwork. Passionate about continuous growth and eager to contribute to impactful, AI-driven projects.
-      </p>
-    </div>
-  </section>
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) mobileMenu.classList.add("hidden");
+    });
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-24">
-    <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div class="glass-effect rounded-xl p-8">
-        <h3 class="text-2xl font-bold text-indigo-200 mb-6 text-center"><i class="fas fa-brain mr-2"></i>AI & Programming Skills</h3>
-        <ul class="space-y-4 text-lg">
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Python programming & AI libraries (TensorFlow, PyTorch)</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Machine Learning models & data analysis</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Deep Learning & Neural Networks</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Data Structures and Algorithms</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Object-Oriented Programming (OOP)</li>
-        </ul>
-      </div>
-      <div class="glass-effect rounded-xl p-8">
-        <h3 class="text-2xl font-bold text-indigo-200 mb-6 text-center"><i class="fas fa-tools mr-2"></i>Soft Skills</h3>
-        <ul class="space-y-4 text-lg">
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Strong communication skills</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Quick learner and adaptable</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Attention to detail and analytical thinking</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Teamwork and collaboration</li>
-          <li class="bg-gray-800/50 p-3 rounded-lg flex items-center"><i class="fas fa-check-circle text-indigo-300 mr-3"></i>Time management skills</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    document.body.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
 
-  <!-- Background Section -->
-  <section id="background" class="py-24">
-    <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">My Background</h2>
-    <div class="max-w-4xl mx-auto pl-12 relative timeline">
-      <div class="mb-12 relative">
-        <div class="absolute -left-10 top-1 w-8 h-8 bg-indigo-700 rounded-full border-4 border-black flex items-center justify-center">
-          <i class="fas fa-graduation-cap text-indigo-200"></i>
-        </div>
-        <div class="glass-effect rounded-xl p-6">
-          <p class="text-indigo-300 font-bold mb-1">Sep 2023 - Expected 2027</p>
-          <h3 class="text-2xl font-bold text-white">Faculty of Information Technology and Computer Science</h3>
-          <p class="text-lg text-indigo-200 mb-2">Sinai University</p>
-          <p>Current CGPA: 3.00 out of 4.00</p>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="absolute -left-10 top-1 w-8 h-8 bg-indigo-700 rounded-full border-4 border-black flex items-center justify-center">
-          <i class="fas fa-briefcase text-indigo-200"></i>
-        </div>
-        <div class="glass-effect rounded-xl p-6">
-          <p class="text-indigo-300 font-bold mb-1">2021 - 2023</p>
-          <h3 class="text-2xl font-bold text-white">Freelancer Graphic Designer</h3>
-          <p class="mt-2 leading-relaxed">Designed logos, social media content, posters, and promotional materials for clients across various industries. Used tools to deliver high-quality, client-oriented designs. Collaborated with clients to understand their vision and meet tight deadlines.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    window.addEventListener("scroll", () => {
+      let scrolled =
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
+      scrollIndicator.style.width = scrolled + "%";
+      backToTop.style.opacity = window.scrollY > 350 ? 1 : 0;
+    });
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-24">
-    <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">My Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-      <a href="https://github.com/eng-ahmed-15/Paint-App-CS" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
-        <h3 class="text-xl font-bold text-indigo-200">Paint App - C#</h3>
-      </a>
-      <a href="https://github.com/eng-ahmed-15/Banking-Management-System-SWE" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
-        <h3 class="text-xl font-bold text-indigo-200">Banking Management System - SWE</h3>
-      </a>
-      <a href="https://github.com/eng-ahmed-15/Dental-Clinic-Management-System-Cbb" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
-        <h3 class="text-xl font-bold text-indigo-200">Dental Clinic Management System - C++</h3>
-      </a>
-      <a href="https://github.com/eng-ahmed-15/Hospital-Management-System-DB" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
-        <h3 class="text-xl font-bold text-indigo-200">Hospital Management System - DB</h3>
-      </a>
-      <a href="https://github.com/eng-ahmed-15/coffee-health-analysis" target="_blank" class="block glass-effect rounded-xl p-8 group transform hover:-translate-y-2 transition-transform duration-300 flex justify-center items-center text-center h-40">
-        <h3 class="text-xl font-bold text-indigo-200">Coffee Health Analysis Machine Learning</h3>
-      </a>
-    </div>
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-24">
-    <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">Certifications</h2>
-    <div class="max-w-4xl mx-auto space-y-4">
-      <a href="https://maharatech.gov.eg/badges/badge.php?hash=7595287d1f0bf10c42a3a0d5bcc40ed63445de1a" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Python Programming Basics</p>
-          <p class="text-indigo-400">Mahara Tech - AI Academy, ITI</p>
-        </div>
-      </a>
-      <a href="https://maharatech.gov.eg/badges/badge.php?hash=cb54df6b43631b9f2c2e2be8f87da1e3e6e20084" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">AI For Everyone (AI4E)</p>
-          <p class="text-indigo-400">Mahara Tech - AI Academy, ITI</p>
-        </div>
-      </a>
-      <a href="https://www.credly.com/badges/8a7a54b5-533d-4583-8538-c798c66d8a34/linked_in_profile" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Python Essentials 1</p>
-          <p class="text-indigo-400">Cisco Networking Academy</p>
-        </div>
-      </a>
-      <a href="https://www.credly.com/badges/1d28fe6c-b8bb-4414-a385-cfc1111dfb0e/linked_in_profile" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Python Essentials 2</p>
-          <p class="text-indigo-400">Cisco Networking Academy</p>
-        </div>
-      </a>
-      <a href="https://www.life-global.org/certificate/0eac495e-ef77-4519-b96b-15d35f459fd0" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Artificial Intelligence for Beginners</p>
-          <p class="text-indigo-400">HP LIFE - HP Foundation</p>
-        </div>
-      </a>
-      <a href="https://www.credly.com/badges/09bae509-f6b2-42f8-9f40-690ce317d739/linked_in_profile" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Introduction to Modern AI</p>
-          <p class="text-indigo-400">Cisco Networking Academy</p>
-        </div>
-      </a>
-      <a href="https://sprints.ai/en-us/journeys/learning/ID%20-%20SPR%20-%207G3W5Z/view-certificate-serial" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">AI and Machine Learning</p>
-          <p class="text-indigo-400">Sprints x Microsoft Summer Camp</p>
-        </div>
-      </a>
-      <a href="https://learn.nvidia.com/certificates?id=yJo5LGKsSKyZjXnj5jamqg" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Getting Started with Deep Learning</p>
-          <p class="text-indigo-400">NVIDIA</p>
-        </div>
-      </a>
-      <a href="https://drive.google.com/file/d/1VtPqLA6H9dwzumd55_qxV1n6gJRqQcgL/view?usp=drive_link" target="_blank" class="block">
-        <div class="glass-effect rounded-lg p-4 flex items-center justify-between hover:bg-indigo-900/20 transition-colors">
-          <p class="font-semibold text-indigo-200">Machine Learning Summer Training</p>
-          <p class="text-indigo-400">National Telecommunication Institute (NTI) & ITIDA</p>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-24">
-    <h2 class="text-4xl font-bold mb-12 text-center section-title text-white">Reach Out to Me</h2>
-    <div class="glass-effect max-w-2xl mx-auto rounded-xl p-8">
-      <p class="text-center text-lg mb-8">Let's collaborate and build something amazing together!</p>
-      <div class="space-y-6 text-lg">
-        <div class="flex items-center">
-          <i class="fas fa-map-marker-alt text-indigo-300 w-6 text-center mr-4"></i>
-          <span>Alexandria, Egypt</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fas fa-phone text-indigo-300 w-6 text-center mr-4"></i>
-          <a href="tel:+201028462632" class="hover:text-indigo-400">+20 1028462632</a>
-        </div>
-        <div class="flex items-center">
-          <i class="fas fa-envelope text-indigo-300 w-6 text-center mr-4"></i>
-          <a href="mailto:a.abogahl2445@su.edu.eg" class="hover:text-indigo-400">a.abogahl2445@su.edu.eg</a>
-        </div>
-        <div class="flex items-center">
-          <i class="fab fa-linkedin text-indigo-300 w-6 text-center mr-4"></i>
-          <a href="https://linkedin.com/in/ahmed-abdelsalam15" target="_blank" class="hover:text-indigo-400">linkedin.com/in/ahmed-abdelsalam15</a>
-        </div>
-        <div class="flex items-center">
-          <i class="fab fa-github text-indigo-300 w-6 text-center mr-4"></i>
-          <a href="https://github.com/eng-ahmed-15" target="_blank" class="hover:text-indigo-400">github.com/eng-ahmed-15</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="bg-black/70 border-t border-gray-800 py-6 text-center text-indigo-300">
-  <p>© 2025 Ahmed Abdelsalam. All Rights Reserved.</p>
-</footer>
-
-<div id="backToTop">
-  <i class="fas fa-arrow-up"></i>
-</div>
-
-<script>
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const backToTop = document.getElementById("backToTop");
-  const scrollIndicator = document.getElementById("scrollIndicator");
-
-  mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) mobileMenu.classList.add("hidden");
-  });
-
-  document.body.addEventListener("click", (e) => {
-    if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-      mobileMenu.classList.add("hidden");
-    }
-  });
-
-  window.addEventListener("scroll", () => {
-    let scrolled =
-      (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) *
-      100;
-    scrollIndicator.style.width = scrolled + "%";
-    backToTop.style.opacity = window.scrollY > 350 ? 1 : 0;
-  });
-
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
