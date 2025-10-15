@@ -177,22 +177,22 @@
     <line class="line" x1="700" y1="90" x2="660" y2="500"/>
   </svg>
 
-  <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_0_22px_rgba(99,102,241,0.18)]">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-extrabold section-title">Ahmed Abdelsalam</h1>
-      <nav class="hidden md:flex space-x-6 text-lg">
-        <a href="#about" class="hover:text-indigo-400">About</a>
-        <a href="#skills" class="hover:text-indigo-400">Skills</a>
-        <a href="#background" class="hover:text-indigo-400">Background</a>
-        <a href="#projects" class="hover:text-indigo-400">Projects</a>
-        <a href="#certifications" class="hover:text-indigo-400">Certifications</a>
-        <a href="#contact" class="hover:text-indigo-400">Contact</a>
-      </nav>
-      <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-200">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+  <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_0_22px_rgba(99,102,241,0.18)] flex items-center justify-between px-6 py-4">
+    <!-- الاسم في الهيدر مخفي افتراضياً -->
+    <h1 id="headerName" class="text-2xl font-extrabold section-title hidden">Ahmed Abdelsalam</h1>
+
+    <nav class="hidden md:flex space-x-6 text-lg flex-grow justify-end">
+      <a href="#about" class="hover:text-indigo-400">About</a>
+      <a href="#skills" class="hover:text-indigo-400">Skills</a>
+      <a href="#background" class="hover:text-indigo-400">Background</a>
+      <a href="#projects" class="hover:text-indigo-400">Projects</a>
+      <a href="#certifications" class="hover:text-indigo-400">Certifications</a>
+      <a href="#contact" class="hover:text-indigo-400">Contact</a>
+    </nav>
+    <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-200">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur px-6 py-4 z-40">
       <a href="#about" class="block py-2 text-center hover:bg-gray-900 rounded">About</a>
       <a href="#skills" class="block py-2 text-center hover:bg-gray-900 rounded">Skills</a>
       <a href="#background" class="block py-2 text-center hover:bg-gray-900 rounded">Background</a>
@@ -207,7 +207,8 @@
     <!-- Hero Section -->
     <section id="hero" class="flex flex-col md:flex-row items-center justify-between text-center md:text-left min-h-[70vh]">
       <div class="md:w-1/2 mb-10 md:mb-0 space-y-6">
-        <h2 class="text-5xl md:text-6xl font-extrabold text-white section-title">Ahmed Abdelsalam</h2>
+        <!-- أضف id هنا ليتم التعرف عليه -->
+        <h2 id="heroName" class="text-5xl md:text-6xl font-extrabold text-white section-title">Ahmed Abdelsalam</h2>
         <p class="text-2xl text-indigo-400 mt-4 mb-8">AI Engineer</p>
         <a href="#contact" class="bg-gray-200 hover:bg-white text-black font-bold py-3 px-8 rounded-full text-lg inline-block">Work With Me</a>
       </div>
@@ -402,15 +403,15 @@
     <p>© 2025 Ahmed Abdelsalam. All Rights Reserved.</p>
   </footer>
 
-  <div id="backToTop">
-    <i class="fas fa-arrow-up"></i>
-  </div>
+  <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
   <script>
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
     const backToTop = document.getElementById("backToTop");
     const scrollIndicator = document.getElementById("scrollIndicator");
+    const heroName = document.getElementById("heroName");
+    const headerName = document.getElementById("headerName");
 
     mobileMenuButton.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
@@ -427,16 +428,27 @@
     });
 
     window.addEventListener("scroll", () => {
+      let rect = heroName.getBoundingClientRect();
+      // تحقق إذا كان العنصر مرئيًا بالكامل داخل النافذة
+      let isVisible = rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+      if (isVisible) {
+        headerName.classList.add("hidden");
+      } else {
+        headerName.classList.remove("hidden");
+      }
+
       let scrolled =
         (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) *
         100;
       scrollIndicator.style.width = scrolled + "%";
+
       backToTop.style.opacity = window.scrollY > 350 ? 1 : 0;
     });
 
     backToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  </script>
+   </script>
 </body>
 </html>
